@@ -545,9 +545,9 @@ void IndirectDeviceContext::InitAdapter()
 	AdapterCaps.EndPointDiagnostics.TransmissionType = IDDCX_TRANSMISSION_TYPE_WIRED_OTHER;
 
 	// Declare your device strings for telemetry (required)
-	AdapterCaps.EndPointDiagnostics.pEndPointFriendlyName = L"IddSample Device";
+	AdapterCaps.EndPointDiagnostics.pEndPointFriendlyName = L"MiniVirtDisplay Device";
 	AdapterCaps.EndPointDiagnostics.pEndPointManufacturerName = L"Microsoft";
-	AdapterCaps.EndPointDiagnostics.pEndPointModelName = L"IddSample Model";
+	AdapterCaps.EndPointDiagnostics.pEndPointModelName = L"MiniVirtDisplay Model";
 
 	// Declare your hardware and firmware versions (required)
 	IDDCX_ENDPOINT_VERSION Version = {};
@@ -860,17 +860,6 @@ NTSTATUS IddSampleMonitorQueryModes(IDDCX_MONITOR MonitorObject, const IDARG_IN_
 	TargetModes.push_back(CreateIddCxTargetMode(960, 540, 90));
 	TargetModes.push_back(CreateIddCxTargetMode(960, 540, 60));
 	TargetModes.push_back(CreateIddCxTargetMode(960, 540, 30));
-
-	// TargetModes.push_back(CreateIddCxTargetMode(3840, 2160, 60));
-	// TargetModes.push_back(CreateIddCxTargetMode(2560, 1440, 144));
-	// TargetModes.push_back(CreateIddCxTargetMode(2560, 1440, 90));
-	// TargetModes.push_back(CreateIddCxTargetMode(2560, 1440, 60));
-	// TargetModes.push_back(CreateIddCxTargetMode(1920, 1080, 144));
-	// TargetModes.push_back(CreateIddCxTargetMode(1920, 1080, 90));
-	// TargetModes.push_back(CreateIddCxTargetMode(1920, 1080, 60));
-	// TargetModes.push_back(CreateIddCxTargetMode(1280, 800, 60));
-	// TargetModes.push_back(CreateIddCxTargetMode(1024, 768, 75));
-	// TargetModes.push_back(CreateIddCxTargetMode(1024, 768, 60));
 
 	pOutArgs->TargetModeBufferOutputCount = (UINT)TargetModes.size();
 
